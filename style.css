@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.music-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff4757;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  z-index: 100;
+}
+.music-btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+/* KOTAK UTAMA */
+.container {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 24px 20px; 
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 380px; /* Lebar maksimal dikecilin dari 450px ke 380px */
+  width: 88%;
+  position: relative;
+  min-height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.page.active {
+  display: block;
+}
+
+.balloon-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.balloon {
+  display: inline-block;
+  animation: float 2.2s infinite ease-in-out alternate;
+}
+.balloon:nth-child(2) { animation-delay: 0.4s; }
+.balloon:nth-child(3) { animation-delay: 0.8s; }
+
+h1 {
+  color: #ff4757;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+h2 {
+  color: #ff4757;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.menu-card {
+  background: #fff0f3;
+  border: 2px solid #ff7675;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.menu-card:hover {
+  background: #ff4757;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 71, 87, 0.3);
+}
+
+.menu-card:hover .menu-desc {
+  color: #ffe0e3;
+}
+
+.menu-icon {
+  font-size: 1.6rem;
+}
+
+.menu-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #ff4757;
+  display: block;
+}
+.menu-card:hover .menu-title {
+  color: white;
+}
+
+.menu-desc {
+  font-size: 0.75rem;
+  color: #666;
+  display: block;
+}
+
+.stacked-photos {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  margin-bottom: 10px;
+}
+
+.polaroid {
+  position: absolute;
+  background: white;
+  padding: 8px 8px 20px 8px;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  width: 145px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.polaroid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.polaroid p {
+  font-size: 0.68rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+.polaroid.p-1 {
+  top: 10px;
+  left: 28%;
+  transform: translateX(-50%) rotate(-6deg);
+  z-index: 1;
+}
+.polaroid.p-2 {
+  top: 20px;
+  left: 55%;
+  transform: translateX(-50%) rotate(8deg);
+  z-index: 2;
+}
+.polaroid.p-3 {
+  top: 35px;
+  left: 42%;
+  transform: translateX(-50%) rotate(-2deg);
+  z-index: 3;
+}
+
+.polaroid:hover {
+  transform: scale(1.08) rotate(0deg) !important;
+  z-index: 10 !important;
+}
+
+button.next-btn, button.prev-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
+}
+
+button.prev-btn {
+  background: #a4b0be;
+  box-shadow: 0 4px 10px rgba(164, 176, 190, 0.3);
+  margin-right: 6px;
+}
+
+button.next-btn:hover, .spam-confetti-btn:hover {
+  transform: scale(1.05);
+  background: #ff6b81;
+}
+
+button.prev-btn:hover {
+  transform: scale(1.05);
+  background: #747d8c;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.spam-confetti-btn {
+  background: linear-gradient(45deg, #ff4757, #ffa502);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+  transition: transform 0.1s ease;
+  margin-top: 5px;
+}
+
+.spam-confetti-btn:active {
+  transform: scale(0.95);
+}
+
+.message-box-pro {
+  padding: 14px;
+  background: #fff0f3;
+  border-radius: 12px;
+  border: 2px dashed #ff4757;
+  margin-bottom: 12px;
+  text-align: left;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.wish-text {
+  color: #2f3542;
+  line-height: 1.5;
+  font-size: 0.82rem;
+}
+
+.final-icon {
+  font-size: 2.8rem;
+  margin-bottom: 6px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

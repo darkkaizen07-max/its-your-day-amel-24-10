@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Sweet Seventeen ZAHIRAHH!! 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+  <!-- Library Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <audio id="bgMusic" loop>
+    <source src="Where We Are.mp4" type="audio/mpeg">
+  </audio>
+
+
+  <button id="musicToggle" class="music-btn" onclick="toggleMusic()">🎵 hidupin lagu</button>
+
+  <div class="container">
+    
+    <!-- HALAMAN 1: -->
+    <div class="page active" id="page-1">
+      <div class="balloon-container">
+        <span class="balloon">🎈</span>
+        <span class="balloon">🎂</span>
+        <span class="balloon">🎁</span>
+      </div>
+      <h1>Happy Birthday Amell!! </h1>
+      <p class="subtitle">ini kejutan kecil buat amel yang lagi <b>SWEET SEVENTEEN</b> 💖💖✨</p>
+      <button class="next-btn" onclick="nextPage(2)">Tekann Tomboll inii 🎁</button>
+    </div>
+
+    <!-- HALAMAN 2:  -->
+    <div class="page" id="page-2">
+      <h2>✨ <b>TIGA PILIHAN UTAMA</b> ✨</h2>
+      <p class="subtitle"> Amel bisa pilih dari tiga pilihan inii mau pilih yang mana duluu nih dekk?? <p>
+      
+      <div class="menu-container">
+        <button class="menu-card" onclick="nextPage(3)">
+          <span class="menu-icon">📸</span>
+          <span class="menu-title">Photo Cardd</span>
+          <span class="menu-desc">Foto nya siapa ya ini?? 😯</span>
+        </button>
+        
+        <button class="menu-card" onclick="nextPage(4)">
+          <span class="menu-icon">💌</span>
+          <span class="menu-title">Messages for youu</span>
+          <span class="menu-desc">hmm.. mau bilang apaa yaaa?? 🤔</span>
+        </button>
+        
+        <button class="menu-card" onclick="nextPage(5)">
+          <span class="menu-icon">🎉</span>
+          <span class="menu-title">Last Surprise!</span>
+          <span class="menu-desc">Kejutan terakhir deh 😉</span>
+        </button>
+      </div>
+
+      <div class="btn-group" style="margin-top: 20px;">
+        <button class="prev-btn" onclick="nextPage(1)">Kembali</button>
+      </div>
+    </div>
+
+    <!-- HALAMAN 3:  -->
+    <div class="page" id="page-3">
+      <h2>📸 Jelas foto Amell lahh</h2>
+      <p class="subtitle">Sentuh atau arahinn kursor nya ke fotoo yaa, nah ini ada tiga foto amel, maaf ya kalau foto nya kurang bagus, soalnya cuman ini yang ada di laptopku 😓😓 </p>
+      
+      <!-- Container Foto Ditimpa -->
+      <div class="stacked-photos">
+        <div class="polaroid p-1" onclick="bringToFront(this)">
+          <img src="marah.png" alt="Foto 1">
+          <p>ini antara kesal atau serius 🤨, tapi ada keselip bahagianyaa </p>
+        </div>
+        <div class="polaroid p-2" onclick="bringToFront(this)">
+          <img src="gab.png" alt="Foto 2">
+          <p>Udah di belahan dunia lain! 🌍</p>
+        </div>
+        <div class="polaroid p-3" onclick="bringToFront(this)">
+          <img src="happy.png" alt="Foto 3">
+          <p>Always Happy!! ✨</p>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button class="prev-btn" onclick="nextPage(2)"> 👈 Balek dulu?</button>
+        <button class="next-btn" onclick="nextPage(4)">Atau lanjut aja?? 👉</button>
+      </div>
+    </div>
+
+    <!-- HALAMAN 4: SPECIAL WISHES -->
+    <div class="page" id="page-4">
+      <h2>💌 Just for youu!!</h2>
+      <div class="message-box-pro">
+        <p class="wish-text">
+          "HABEDEE AMELL 🎉🎉 , Happy Sweet Seventeenn 1️⃣7️⃣ yaaa, ciee udah gede ajaa adekku nii hahahhahaaa 👶🏻👶🏻 maaf yaa kalau selama ini aku banyak salah samaa kau 🥹, aku tau aku ga sesempurna orang lainn, aku juga udah sering bikin kau kecewa 😔😢, aku bikin kau ngambokannn marah teruss, aku juga gatau cara minta maaf yang benar ke amell😓😓, jujur aja yaa dek, dari kelas 10 aku udah selalu nyiapin hadiah, tapi gak kesampean buat ngasih ke kau 🎁🎈, akhirnya kelas 11 aku fokus belajar coding 👩‍💻 akhirnya aku buat lah ini, dan jujur ini masih jauh dari kata sempurna 💯, tapi akan aku usahain semampuku dan seniatnya, jujur juga sebenarnya aku pernah sakit hati 💔 gegara kau bilang silmi aja ucapin kau, masa aku sebagai kakak ga ada ngasih apa gitu, yaa aku juga salah sih, waktu itu aku ga ada skill ngedit 📽️, ga ada skill ngoding 💻, ga tau cara ngasih hadiah yang benar ☑️, padahal aku dah beli barangnya. Aku juga masih minder 💭💬 emangnya aku layak jadi kakak kau?, udah ahh pokoknya HABEDEEE YAAA AMEL SAYANGGG 😚😚, aku bensayyy banget sama amel 🌟🫶🏻, tapi aku memang ga pandai nunjukin rasa sayang ku ke amell 🤭🤗, btw aku ga pandai milih lagu yang cocok jadi sembarang aja deh, ini semua peletakannya atau warnanya yang kau kurang suka atau mungkin fotonya yaa itu lah yang terbaik yang aku kasih ke kau yaa dekk, makasihh ya amell udah jadi adek terbaik 😆😆 dann yaa itu aja sih, makasihh yaa amell, moga lulus di univ 🏛️ impian amell, jadi lulusan terbaikk 👩🏻‍🎓👩🏻‍🎓, dan bisa banggain umii abiii #akusayangamelnyakbanyak 🥰💖💕💗"
+        </p>
+      </div>
+      
+      <div class="btn-group">
+        <button class="prev-btn" onclick="nextPage(2)">👈 Balek dulu?</button>
+        <button class="next-btn" onclick="nextPage(5)">Atau lanjut aja?? 👉</button>
+      </div>
+    </div>
+
+    <!-- HALAMAN 5: -->
+    <div class="page" id="page-5">
+      <div class="final-icon">🎉🎂👑</div>
+      <h1>HAPPY SWEET SEVENTEEN!</h1>
+      <p class="subtitle">Udah sampai di halaman terakhir aja nihh, intinya happy sweet 17 amell, oiya tombol dibawah ni buat diklik biar ngeluarin confetti! coba amell pencett 👇 bisa dipencet berkali kali kokk</p>
+      
+      <button class="spam-confetti-btn" onclick="triggerSpamConfetti()">🎉 HABEDE AMELL 🎉</button>
+
+      <div class="btn-group" style="margin-top: 25px;">
+        <button class="prev-btn" onclick="nextPage(2)">👈 Balek dekk?</button>
+        <button class="next-btn" onclick="nextPage(1)">Atau ngulang ? 🔄</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
